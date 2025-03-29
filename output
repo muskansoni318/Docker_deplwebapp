@@ -1,0 +1,26 @@
+
+Sending build context to Docker daemon  67.58kB
+Step 1/7 : FROM ubuntu:14.04
+ ---> 13b66b487594
+Step 2/7 : RUN apt-get update
+ ---> Using cache
+ ---> d26e3fc0e01e
+Step 3/7 : RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-all python-pip
+ ---> Using cache
+ ---> 02960ea400b8
+Step 4/7 : ADD . /opt/webapp/
+ ---> 6b1e1aeed2ea
+Step 5/7 : WORKDIR /opt/webapp
+ ---> Running in ba47981a9891
+ ---> Removed intermediate container ba47981a9891
+ ---> 800d5d821d3b
+Step 6/7 : EXPOSE 5000
+ ---> Running in 7bd5f4d80a12
+ ---> Removed intermediate container 7bd5f4d80a12
+ ---> 8dd2566f505d
+Step 7/7 : CMD ["python", "app.py"]
+ ---> Running in 4ba045ade535
+ ---> Removed intermediate container 4ba045ade535
+ ---> 6b6dd818d91f
+Successfully built 6b6dd818d91f
+root@DESKTOP-40SO7IG:~/Docker_deplwebapp#
